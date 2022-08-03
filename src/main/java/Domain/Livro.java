@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class livro implements Serializable {
+public class Livro implements Serializable {
     private static final long serialVersionUID;
 
     static {
@@ -23,11 +23,11 @@ public class livro implements Serializable {
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
 
-    public livro() {
+    public Livro() {
         super();
     }
 
-    public livro(Integer id, String titulo, String nomeAutor, String texto, Categoria categoria) {
+    public Livro(Integer id, String titulo, String nomeAutor, String texto, Categoria categoria) {
         this.id = id;
         this.titulo = titulo;
         this.nomeAutor = nomeAutor;
@@ -78,8 +78,8 @@ public class livro implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof livro)) return false;
-        livro livro = (livro) o;
+        if (!(o instanceof Livro)) return false;
+        Livro livro = (Livro) o;
         return Objects.equals(getId(), livro.getId());
     }
 
