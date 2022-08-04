@@ -1,5 +1,7 @@
 package Domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
@@ -19,6 +21,7 @@ public class Livro implements Serializable {
     private String nomeAutor;
     private String texto;
 
+    @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Categoria categoria;
@@ -28,6 +31,7 @@ public class Livro implements Serializable {
     }
 
     public Livro(Integer id, String titulo, String nomeAutor, String texto, Categoria categoria) {
+        super();
         this.id = id;
         this.titulo = titulo;
         this.nomeAutor = nomeAutor;
