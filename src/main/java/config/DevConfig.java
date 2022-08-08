@@ -9,13 +9,17 @@ import service.DBService;
 
 @Configuration
 @Profile("dev")
-public class devConfig {
+public class DevConfig {
 
     @Autowired
     private DBService dbService;
 
-    @Value("$[spring.jpa.hibernate.ddl-auto]")
+    @Value("${spring.jpa.hibernate.ddl-auto}")
     private String strategy;
+
+    public DevConfig(String strategy) {
+        this.strategy = strategy;
+    }
 
     @Bean
     public boolean instanciaBaseDeDados() {
