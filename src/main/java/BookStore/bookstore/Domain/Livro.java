@@ -1,4 +1,4 @@
-package Domain;
+package BookStore.bookstore.Domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 

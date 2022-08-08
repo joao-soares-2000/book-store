@@ -1,11 +1,11 @@
-package service;
+package BookStore.bookstore.service;
 
-import Domain.Categoria;
-import Domain.Livro;
+import BookStore.bookstore.Domain.Categoria;
+import BookStore.bookstore.Domain.Livro;
+import BookStore.bookstore.repositories.CategoriaRepository;
+import BookStore.bookstore.repositories.LivroRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import repositories.CategoriaRepository;
-import repositories.LivroRepository;
 
 import java.util.Arrays;
 

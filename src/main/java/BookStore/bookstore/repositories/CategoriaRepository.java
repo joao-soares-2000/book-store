@@ -1,6 +1,6 @@
-package repositories;
+package BookStore.bookstore.repositories;
 
-import Domain.Categoria;
+import BookStore.bookstore.Domain.Categoria;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

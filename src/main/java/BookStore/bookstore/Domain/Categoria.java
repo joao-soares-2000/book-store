@@ -1,4 +1,4 @@
-package Domain;
+package BookStore.bookstore.Domain;
 
 import javax.persistence.*;
 import java.io.Serializable;
