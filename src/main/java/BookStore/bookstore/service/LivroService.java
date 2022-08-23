@@ -1,5 +1,6 @@
 package BookStore.bookstore.service;
 
+import BookStore.bookstore.Domain.Categoria;
 import BookStore.bookstore.Domain.Livro;
 import BookStore.bookstore.repositories.LivroRepository;
 import BookStore.bookstore.service.exceptions.ObjectNotFoundException;
@@ -39,5 +40,12 @@ public class LivroService {
         newObj.setTitulo(obj.getTitulo());
         newObj.setTexto(obj.getTexto());
         newObj.setNomeAutor(obj.getNomeAutor());
+    }
+
+    public Livro create(Integer id_cat, Livro obj) {
+        obj.setId(null);
+        Categoria cat = categoriaService.findById(id_cat);
+        obj.setCategoria(cat);
+        return repository.save(obj);
     }
 }
