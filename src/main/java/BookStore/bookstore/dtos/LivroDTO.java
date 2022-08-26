@@ -7,6 +7,7 @@ import java.io.Serializable;
 public class LivroDTO implements Serializable {
     private Integer id;
     private String titulo;
+    
 
     public LivroDTO() {
         super();
