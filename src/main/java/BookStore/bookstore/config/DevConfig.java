@@ -16,7 +16,6 @@ public class DevConfig {
 
     @Value("${spring.jpa.hibernate.ddl-auto}")
     private String strategy;
-
     public DevConfig(String strategy) {
         this.strategy = strategy;
     }
